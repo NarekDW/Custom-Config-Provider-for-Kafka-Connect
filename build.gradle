@@ -14,8 +14,7 @@ dependencies {
     compile 'com.amazonaws:aws-java-sdk-ssm:1.11.661',
             'org.slf4j:slf4j-api:1.7.25'
 
-    compileOnly 'org.apache.kafka:kafka_2.12:2.3.1',
-            'org.projectlombok:lombok:1.18.10'
+    compileOnly 'org.apache.kafka:kafka_2.12:2.3.1'
 }
 
 wrapper.gradleVersion = '4.10'
