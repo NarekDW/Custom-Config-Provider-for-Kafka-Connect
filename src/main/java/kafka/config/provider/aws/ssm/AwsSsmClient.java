@@ -21,7 +21,8 @@ class AwsSsmClient {
 
     Map<String, String> getParameters(Set<String> keys) {
         GetParametersRequest request = new GetParametersRequest()
-                .withNames(keys);
+                .withNames(keys)
+                .withWithDecryption(true);
         return ssmClient.getParameters(request)
                 .getParameters()
                 .stream()
