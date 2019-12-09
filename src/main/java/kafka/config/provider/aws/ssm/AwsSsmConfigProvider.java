@@ -23,8 +23,10 @@ public class AwsSsmConfigProvider implements ConfigProvider {
 
     @Override
     public ConfigData get(String path, Set<String> keys) {
-        log.info("Retrieve values for keys {} from AWS SSM", keys);
+        log.info("SSM PLUGIN: Retrieve values for keys {} from AWS SSM", keys);
         Map<String, String> parameters = ssmClient.getParameters(keys);
+        log.info("SSM PLUGIN: Retrieved {} parameters from SSM", parameters.size());
+        parameters.forEach((key, value) -> log.info("SSM PLUGIN: {}={}", key, value));
         Set<String> absentKeys = keys.stream()
                 .filter(key -> !parameters.containsKey(key))
                 .collect(Collectors.toSet());
