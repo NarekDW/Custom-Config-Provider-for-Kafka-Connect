@@ -49,3 +49,4 @@ public class AwsSsmConfigProvider implements ConfigProvider {
     public void configure(Map<String, ?> configs) {
     }
 }
+
