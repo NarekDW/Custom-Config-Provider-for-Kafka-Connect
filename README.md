@@ -6,9 +6,9 @@ You can find some additional information in details here: [Kafka Connect Securit
 Current implementation uses **AWS Systems Manager** as an External System whcich stores configuration parameters.
 
 ## Usage
-Build:
+Build: (assuming you are building from project root)
 ```
-gradle fatJar
+./gradlew fatJar
 ```
 
 Add a reference to the jar file in the Kafka Connect Worker Config file:
